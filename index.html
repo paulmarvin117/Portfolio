@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paul Marvin Portfolio</title>
+  <meta name="description" content="Paul Marvin is a backend developer who writes Python and C# and loves building on Azure. Open the windows to meet him and get in touch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Mr+Dafoe&family=Open+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Shared colours and icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fdcff"/><stop offset="1" stop-color="#1673c4"/></linearGradient>
+      <linearGradient id="gOrange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffbe8c"/><stop offset="1" stop-color="#e5531a"/></linearGradient>
+      <linearGradient id="gPlum" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a2d70"/><stop offset="1" stop-color="#2c0a22"/></linearGradient>
+      <linearGradient id="gDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6673"/><stop offset="1" stop-color="#1b242e"/></linearGradient>
+      <linearGradient id="gSilver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfcfd"/><stop offset="1" stop-color="#a9b4c0"/></linearGradient>
+      <linearGradient id="gFolder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ad4f5"/><stop offset="1" stop-color="#3a86c0"/></linearGradient>
+      <radialGradient id="gSea" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#7fe0ff"/><stop offset="1" stop-color="#0b64b8"/></radialGradient>
+
+      <symbol id="i-whoami" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gBlue)"/><rect x="19" y="20" width="5" height="11" rx="2.5" fill="#0e2a47"/><rect x="40" y="20" width="5" height="11" rx="2.5" fill="#0e2a47"/><path d="M30 24v12a2 2 0 0 0 2 2" stroke="#0e2a47" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M17 43c9 8 21 8 30 0" stroke="#0e2a47" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".3"/></symbol>
+      <symbol id="i-journey" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gOrange)"/><path d="M15 47c8-2 6-14 15-15s9-12 19-15" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="1 7"/><circle cx="15" cy="47" r="5" fill="#fff"/><circle cx="49" cy="17" r="6" fill="#fff"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".3"/></symbol>
+      <symbol id="i-projects" viewBox="0 0 64 64"><path d="M6 20a5 5 0 0 1 5-5h15l6 7h21a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H11a5 5 0 0 1-5-5z" fill="url(#gFolder)" stroke="#2c5f87" stroke-width="1.5"/><path d="M6 28h52v20a5 5 0 0 1-5 5H11a5 5 0 0 1-5-5z" fill="#fff" opacity=".22"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gPlum)"/><path d="M15 22l12 10-12 10" stroke="#ff7a3d" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 44h18" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".2"/></symbol>
+      <symbol id="i-safari" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="url(#gSilver)" stroke="#8d99a6" stroke-width="1.5"/><circle cx="32" cy="32" r="23" fill="url(#gSea)"/><path d="M32 12l7 20-7 20-7-20z" transform="rotate(45 32 32)" fill="#fff"/><path d="M32 12l7 20H25z" transform="rotate(45 32 32)" fill="#e8372a"/><ellipse cx="32" cy="18" rx="20" ry="9" fill="#fff" opacity=".28"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gBlue)"/><rect x="12" y="19" width="40" height="27" rx="4" fill="#fff"/><path d="M13 22l19 15 19-15" stroke="#4a8fc9" stroke-width="3" fill="none" stroke-linejoin="round"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".3"/></symbol>
+      <symbol id="i-calc" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gDark)"/><rect x="12" y="11" width="40" height="14" rx="3" fill="#9be8ff"/><circle cx="20" cy="36" r="4" fill="#d6dde5"/><circle cx="32" cy="36" r="4" fill="#d6dde5"/><circle cx="44" cy="36" r="4" fill="#ff7a3d"/><circle cx="20" cy="48" r="4" fill="#d6dde5"/><circle cx="32" cy="48" r="4" fill="#d6dde5"/><circle cx="44" cy="48" r="4" fill="#ff7a3d"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".18"/></symbol>
+      <symbol id="i-prefs" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="15" fill="url(#gSilver)" stroke="#8d99a6" stroke-width="1.5"/><circle cx="32" cy="32" r="15" fill="none" stroke="#5a6b7b" stroke-width="9" stroke-dasharray="5.9 5.9"/><circle cx="32" cy="32" r="12" fill="#6f8296"/><circle cx="32" cy="32" r="5" fill="#e8edf2"/><path d="M6 17c0-8 6-12 14-12h24c8 0 14 4 14 12 0 4-10 8-26 8S6 21 6 17z" fill="#fff" opacity=".4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 64 64"><rect x="5" y="5" width="54" height="54" rx="13" fill="#fff" stroke="#9aa6b3" stroke-width="1.5"/><path d="M5 18a13 13 0 0 1 13-13h28a13 13 0 0 1 13 13v3H5z" fill="#e8372a"/><rect x="18" y="30" width="8" height="7" rx="1.5" fill="#2f6384"/><rect x="28" y="30" width="8" height="7" rx="1.5" fill="#2f6384"/><rect x="38" y="30" width="8" height="7" rx="1.5" fill="#ff7a2f"/><rect x="18" y="41" width="8" height="7" rx="1.5" fill="#2f6384"/><rect x="28" y="41" width="8" height="7" rx="1.5" fill="#2f6384"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 64 64"><path d="M16 16h32l-3 40a4 4 0 0 1-4 3H23a4 4 0 0 1-4-3z" fill="url(#gSilver)" stroke="#7f8b98" stroke-width="1.5"/><path d="M26 22l1 30M32 22v30M38 22l-1 30" stroke="#9aa6b3" stroke-width="2" stroke-linecap="round"/><rect x="13" y="10" width="38" height="7" rx="3.5" fill="#d5dce4" stroke="#7f8b98" stroke-width="1.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Loading screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <p class="hello" id="hello">hello</p>
+      <p class="boot">starting up</p>
+      <div class="bar"><span></span></div>
+      <button class="skip" id="skip" type="button">click to skip</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen">
+
+    <div class="water" id="water" data-wall="water" aria-hidden="true">
+      <i class="ripple one"></i>
+      <i class="ripple two"></i>
+      <i class="glint one"></i>
+      <i class="glint two"></i>
+    </div>
+
+    <!-- Menu bar -->
+    <header class="menubar" id="menubar">
+      <div class="menus">
+        <button class="menu apple" type="button" data-menu="apple" aria-label="Apple menu">
+          <svg viewBox="0 0 16 20" width="14" height="17" aria-hidden="true"><path d="M11.2 10.6c0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.600-1.700-3.200-1.700-1.400-.1-2.600.8-3.300.8s-1.700-.8-2.800-.8C2.400 5.700 1 6.600.3 8c-1.500 2.600-.4 6.400 1.100 8.500.7 1 1.500 2.100 2.600 2.100 1 0 1.400-.7 2.700-.7s1.600.7 2.700.7 1.800-1 2.500-2c.8-1.200 1.100-2.300 1.100-2.400 0 0-2.300-.9-2.300-3.600z"/><path d="M9 3.500c.6-.7 1-1.700.9-2.700-.9 0-2 .6-2.600 1.300-.6.600-1.100 1.600-.9 2.600 1 .1 2-.5 2.600-1.200z"/></svg>
+        </button>
+        <strong class="appname" id="appname">Finder</strong>
+        <button class="menu" type="button" data-menu="file">File</button>
+        <button class="menu" type="button" data-menu="edit">Edit</button>
+        <button class="menu" type="button" data-menu="view">View</button>
+        <button class="menu" type="button" data-menu="special">Special</button>
+        <button class="menu" type="button" data-menu="help">Help</button>
+      </div>
+      <div class="status-items">
+        <button class="sitem" id="wifi" type="button" aria-label="Network status">
+          <svg viewBox="0 0 20 16" width="19" height="15" aria-hidden="true"><path d="M2 6a11 11 0 0 1 16 0M5 9.500a7 7 0 0 1 10 0M8 13a3 3 0 0 1 4 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="10" cy="14.500" r="1.200" fill="currentColor"/></svg>
+        </button>
+        <button class="sitem" id="battery" type="button" aria-label="Battery" hidden>
+          <svg viewBox="0 0 26 14" width="24" height="13" aria-hidden="true"><rect x="1" y="1" width="21" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><rect id="batFill" x="3" y="3" width="17" height="8" rx="1.500" fill="currentColor"/><rect x="23" y="4.500" width="2" height="5" rx="1" fill="currentColor"/></svg>
+          <span id="batText"></span>
+        </button>
+        <button class="menu sitem" type="button" data-menu="power" aria-label="Power options">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 1.500v6M4.200 4a5.500 5.500 0 1 0 7.600 0" stroke="currentColor" stroke-width="1.900" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <button class="clock" id="clock" type="button" aria-label="Open Calendar"><span class="cdate" id="cdate"></span><span id="ctime"></span></button>
+      </div>
+    </header>
+    <div class="dropdown" id="dropdown" hidden></div>
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+
+    <!-- Windows -->
+    <main class="desk" id="desk">
+
+      <!-- WHO AM I -->
+      <section class="window closed" id="win-whoami" data-app="whoami">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">whoami &mdash; Paul Marvin</h2>
+        </div>
+        <div class="content">
+          <div class="site">
+
+            <div class="plate">
+              <div class="brand">
+                <div class="cube-logo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <span>Paul<br>Marvin</span>
+              </div>
+              <nav class="navlinks" aria-label="Open a window">
+                <button class="on" type="button" data-open="whoami">About</button>
+                <button type="button" data-open="journey">Journey</button>
+                <button type="button" data-open="projects">Projects</button>
+                <button type="button" data-open="terminal">Terminal</button>
+                <button type="button" data-open="reach">Reach out</button>
+              </nav>
+            </div>
+
+            <div class="hero">
+              <div class="intro">
+                <p class="prompt">$ whoami</p>
+                <h1>I build backends that stay up.</h1>
+                <p>I'm Paul, a backend developer. I write Python and C#, and I like building on Azure. Give me a messy problem and a clean API to design, and I'm happy.</p>
+                <div class="actions">
+                  <button class="gel" type="button" data-open="projects">View Projects <span class="play">&#9654;</span></button>
+                  <button class="gel ghost" type="button" data-open="reach">Say hello</button>
+                </div>
+                <p class="facts"><span>Python</span><span>C# and .NET</span><span>Azure</span><span>APIs</span></p>
+              </div>
+
+              <figure class="bezel">
+                <div class="portrait">
+                  <img id="photo" src="me.jpg" alt="Paul Marvin">
+                  <pre class="codewash">def greet(name: str) -> str:
+    return f"Hello, I'm {name}."
+
+Console.WriteLine(Greet("Paul"));</pre>
+                </div>
+              </figure>
+            </div>
+
+            <!-- About me -->
+            <section class="about" id="about">
+              <h3 class="shelf-title">About me</h3>
+              <div class="about-grid">
+                <div class="prose">
+                  <p>I'm a software developer who spends most of my time on the backend, the part of an app that users never see but always feel. I care about code that is easy to read, easy to test and easy to hand to someone else.</p>
+                  <p>Python is where I go when I want to move fast. C# and .NET are where I go when I want structure and strong types. I enjoy using both, and I like picking the one that fits the job.</p>
+                  <p>Azure is my favourite place to run things. I like how quickly an idea can go from my laptop to something live that people can use.</p>
+                  <p>Outside of work I read about security and poke at new tools, just because it's fun.</p>
+                </div>
+                <div class="side-facts">
+                  <h4>What I work with</h4>
+                  <p class="chips"><span>Python</span><span>C#</span><span>.NET</span><span>Azure</span><span>SQL</span><span>REST APIs</span><span>Git</span><span>Linux</span></p>
+                  <h4>What I enjoy</h4>
+                  <ul>
+                    <li>Designing clean, well-named APIs</li>
+                    <li>Turning slow things into fast things</li>
+                    <li>Writing tests that explain the code</li>
+                    <li>Learning something new every week</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <h3 class="shelf-title">Two languages I reach for</h3>
+            <div class="codes">
+              <div class="shot">
+                <div class="shot-bar"><i></i><i></i><i></i><span>hello.py</span></div>
+<pre><span class="k">def</span> <span class="f">greet</span>(name: <span class="t">str</span>) -> <span class="t">str</span>:
+    <span class="k">return</span> <span class="s">f"Hello, I'm {name}."</span>
+
+<span class="f">print</span>(<span class="f">greet</span>(<span class="s">"Paul"</span>))</pre>
+              </div>
+              <div class="shot">
+                <div class="shot-bar"><i></i><i></i><i></i><span>Program.cs</span></div>
+<pre><span class="k">var</span> name = <span class="s">"Paul"</span>;
+
+Console.<span class="f">WriteLine</span>(
+    <span class="s">$"Hello, I'm {name}."</span>);</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- JOURNEY -->
+      <section class="window closed" id="win-journey" data-app="journey">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">Journey &mdash; problems solved</h2>
+        </div>
+        <div class="content">
+          <div class="pad">
+            <p class="prompt">$ git log --problems-solved</p>
+            <h1 class="heading">My journey</h1>
+            <p class="lead">Short stories about problems I ran into and how I fixed them. Click a card to flip it.</p>
+
+            <!--
+              ADD A STORY: copy the block below inside <div class="cards" data-list> and edit the words.
+
+              <button class="flip" type="button" aria-pressed="false">
+                <span class="flip-in">
+                  <span class="face-front">
+                    <span class="kind cloud">cloud</span>
+                    <strong>Short title of the problem</strong>
+                    <span>One or two sentences about what went wrong.</span>
+                    <em>flip for the fix</em>
+                  </span>
+                  <span class="face-back">
+                    <span class="kind cloud">the fix</span>
+                    <span>What you did to fix it.</span>
+                  </span>
+                </span>
+              </button>
+
+              Labels you can use for the coloured tag: cloud, speed, bug, security
+            -->
+            <div class="cards" data-list></div>
+            <div class="empty" data-empty hidden>
+              <strong>Stories are on the way</strong>
+              <span>I'm writing up the problems I've solved. Check back soon.</span>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="window closed" id="win-projects" data-app="projects">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">Projects &mdash; ~/projects</h2>
+        </div>
+        <div class="content">
+          <div class="pad">
+            <p class="prompt">$ ls ~/projects</p>
+            <h1 class="heading">Projects</h1>
+            <p class="lead">Things I've built, each with a short description and a link to try it.</p>
+
+            <!--
+              ADD A PROJECT: copy the block below inside <div class="projects" data-list> and edit it.
+
+              <article class="project">
+                <div class="shot">
+                  <div class="shot-bar"><i></i><i></i><i></i><span>project-name</span></div>
+                  <pre>a few lines of output or code that show what it does</pre>
+                </div>
+                <h3>Project name</h3>
+                <p>What it does and why you built it.</p>
+                <p class="tags"><span>Python</span><span>Azure</span></p>
+                <a class="gel" href="https://your-link-here" target="_blank" rel="noopener">Use project</a>
+              </article>
+
+              For a screenshot instead of code, swap the <div class="shot"> block for:
+              <img class="shot-img" src="screenshot.png" alt="Project name screenshot">
+            -->
+            <div class="projects" data-list></div>
+            <div class="empty" data-empty hidden>
+              <strong>Projects are coming soon</strong>
+              <span>I'm getting my first projects ready to show here. Check back soon.</span>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- TERMINAL -->
+      <section class="window closed" id="win-terminal" data-app="terminal">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle" id="termTitle">paul@ubuntu: ~</h2>
+        </div>
+        <div class="content termbody" id="termBody">
+          <div class="screenbox" id="termScreen">
+            <div id="termOut"></div>
+            <div class="inputline">
+              <span class="ps" id="termPs"></span>
+              <input id="termIn" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal input">
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- SAFARI -->
+      <section class="window closed" id="win-safari" data-app="safari">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle" id="safariTitle">Safari &mdash; Start Page</h2>
+        </div>
+        <div class="safari">
+          <div class="toolbar">
+            <button class="tbtn" id="sBack" type="button" aria-label="Back" disabled>&lsaquo;</button>
+            <button class="tbtn" id="sFwd" type="button" aria-label="Forward" disabled>&rsaquo;</button>
+            <button class="tbtn" id="sReload" type="button" aria-label="Reload">&#8635;</button>
+            <button class="tbtn" id="sHome" type="button" aria-label="Home">&#8962;</button>
+            <form class="address" id="sForm">
+              <input id="sInput" type="text" placeholder="Search or type a web address" autocomplete="off" spellcheck="false" aria-label="Address and search">
+              <select id="sEngine" aria-label="Search with">
+                <option value="google">Google</option>
+                <option value="googleimages">Google Images</option>
+                <option value="bing">Bing</option>
+                <option value="wikipedia">Wikipedia</option>
+                <option value="stackoverflow">Stack Overflow</option>
+                <option value="github">GitHub</option>
+              </select>
+              <button class="go" type="submit">Go</button>
+            </form>
+          </div>
+          <div class="bookmarks">
+            <button type="button" data-article="Python (programming language)">Python</button>
+            <button type="button" data-article="C Sharp (programming language)">C#</button>
+            <button type="button" data-article=".NET">.NET</button>
+            <button type="button" data-article="Microsoft Azure">Azure</button>
+            <button type="button" data-article="Ubuntu">Ubuntu</button>
+            <button type="button" data-article="Git">Git</button>
+          </div>
+          <div class="loadbar"><span id="sBar"></span></div>
+          <div class="viewport" id="sView"></div>
+          <div class="statusline" id="sStatus">Done</div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- REACH OUT (MAIL) -->
+      <section class="window closed" id="win-reach" data-app="reach">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">New Message &mdash; Mail</h2>
+        </div>
+        <div class="content">
+          <div class="pad">
+            <p class="prompt">$ ping paul</p>
+            <h1 class="heading">Let's talk</h1>
+            <p class="lead">Hiring, collaborating, or just want to talk code? Pick whatever is easiest.</p>
+
+            <div class="reach">
+              <div class="links">
+                <a class="tile whatsapp" href="https://wa.me/256756959421?text=Hi%20Paul%2C%20I%20found%20your%20portfolio" target="_blank" rel="noopener">
+                  <strong>WhatsApp</strong><span>Opens a chat straight to my inbox</span>
+                </a>
+                <button class="tile callbook" type="button" data-open="calendar">
+                  <strong>Book a call</strong><span>Pick a day and time and I'll contact you</span>
+                </button>
+                <a class="tile github" href="https://github.com/YOUR-GITHUB-NAME" target="_blank" rel="noopener">
+                  <strong>GitHub</strong><span>Code, experiments, commits</span>
+                </a>
+                <a class="tile linkedin" href="https://www.linkedin.com/in/YOUR-LINKEDIN-NAME" target="_blank" rel="noopener">
+                  <strong>LinkedIn</strong><span>The professional side</span>
+                </a>
+              </div>
+
+              <form class="note" id="note" autocomplete="on">
+                <label for="email">Your email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Say hello, I read everything." required></textarea>
+
+                <input class="trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="send-row">
+                  <button class="gel hot" type="submit" id="send">Send message</button>
+                  <p class="status" id="status" role="status"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- CALENDAR -->
+      <section class="window closed" id="win-calendar" data-app="calendar">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">Calendar</h2>
+        </div>
+        <div class="content">
+          <div class="cal">
+            <aside class="cal-side">
+              <p class="cal-label">Right now</p>
+              <p class="bigtime" id="calTime"></p>
+              <p class="cal-date" id="calDate"></p>
+              <p class="cal-zone" id="calZone"></p>
+              <p class="cal-label pick-label">Selected day</p>
+              <p class="cal-pick" id="calPick"></p>
+            </aside>
+            <div class="cal-main">
+              <div class="cal-head">
+                <button class="tbtn" id="calPrev" type="button" aria-label="Previous month">&lsaquo;</button>
+                <h2 id="calMonth"></h2>
+                <button class="tbtn" id="calNext" type="button" aria-label="Next month">&rsaquo;</button>
+                <button class="gel small" id="calToday" type="button">Today</button>
+              </div>
+              <div class="cal-grid" id="calGrid"></div>
+
+              <section class="book" id="book">
+                <h3>Ask Paul to contact you</h3>
+                <p class="book-sub" id="bookSub">Pick a day in the calendar, choose a time, and Paul gets an email with your request.</p>
+                <form id="bookForm" autocomplete="on" novalidate>
+                  <div class="book-row">
+                    <div class="field"><label for="bkDay">Day</label><input id="bkDay" type="text" readonly></div>
+                    <div class="field"><label for="bkTime">Time</label><input id="bkTime" name="time" type="time" required></div>
+                  </div>
+                  <p class="book-zone" id="bkZone"></p>
+                  <div class="book-row">
+                    <div class="field"><label for="bkName">Your name</label><input id="bkName" name="name" type="text" required placeholder="Your name" autocomplete="name"></div>
+                    <div class="field"><label for="bkEmail">Your email</label><input id="bkEmail" name="email" type="email" required placeholder="you@company.com" autocomplete="email"></div>
+                  </div>
+                  <div class="book-row">
+                    <div class="field"><label for="bkPhone">Phone number <em>(optional)</em></label><input id="bkPhone" name="phone" type="tel" placeholder="+256 700 000 000" autocomplete="tel"></div>
+                    <div class="field">
+                      <label for="bkMethod">Best way to reach you</label>
+                      <select id="bkMethod" name="method">
+                        <option value="email">Email</option>
+                        <option value="call">Phone call</option>
+                        <option value="whatsapp">WhatsApp</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field"><label for="bkNote">What would you like to talk about? <em>(optional)</em></label><textarea id="bkNote" name="note" rows="2" placeholder="A role, a project, a question..."></textarea></div>
+                  <input class="trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+                  <div class="send-row">
+                    <button class="gel hot" type="submit" id="bkSend">Send request</button>
+                    <p class="status" id="bkStatus" role="status"></p>
+                  </div>
+                </form>
+                <div class="reqs" id="reqs" hidden>
+                  <h4>Your requests</h4>
+                  <ul id="reqList"></ul>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- CALCULATOR -->
+      <section class="window closed" id="win-calc" data-app="calc">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">Calculator</h2>
+        </div>
+        <div class="content">
+          <div class="calc">
+            <output class="calc-display" id="calcOut">0</output>
+            <div class="calc-keys" id="calcKeys">
+              <button type="button" class="fn" data-k="C">C</button>
+              <button type="button" class="fn" data-k="neg">&plusmn;</button>
+              <button type="button" class="fn" data-k="pct">%</button>
+              <button type="button" class="op" data-k="/">&divide;</button>
+              <button type="button" class="num" data-k="7">7</button>
+              <button type="button" class="num" data-k="8">8</button>
+              <button type="button" class="num" data-k="9">9</button>
+              <button type="button" class="op" data-k="*">&times;</button>
+              <button type="button" class="num" data-k="4">4</button>
+              <button type="button" class="num" data-k="5">5</button>
+              <button type="button" class="num" data-k="6">6</button>
+              <button type="button" class="op" data-k="-">&minus;</button>
+              <button type="button" class="num" data-k="1">1</button>
+              <button type="button" class="num" data-k="2">2</button>
+              <button type="button" class="num" data-k="3">3</button>
+              <button type="button" class="op" data-k="+">+</button>
+              <button type="button" class="num zero" data-k="0">0</button>
+              <button type="button" class="num" data-k=".">.</button>
+              <button type="button" class="eq" data-k="=">=</button>
+            </div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+
+      <!-- SYSTEM PREFERENCES -->
+      <section class="window closed" id="win-prefs" data-app="prefs">
+        <div class="titlebar">
+          <div class="lights"><button class="light red" data-act="close" type="button" aria-label="Close"></button><button class="light yellow" data-act="min" type="button" aria-label="Minimize"></button><button class="light green" data-act="zoom" type="button" aria-label="Zoom"></button></div>
+          <h2 class="wtitle">System Preferences</h2>
+        </div>
+        <div class="content">
+          <div class="prefs">
+            <h3>Desktop</h3>
+            <div class="walls" id="walls">
+              <button type="button" class="wall w-water" data-wall="water" aria-label="Water"><span>Water</span></button>
+              <button type="button" class="wall w-graphite" data-wall="graphite" aria-label="Graphite"><span>Graphite</span></button>
+              <button type="button" class="wall w-dusk" data-wall="dusk" aria-label="Dusk"><span>Dusk</span></button>
+            </div>
+
+            <h3>Date and time</h3>
+            <label class="prow" for="p24"><span>Use 24-hour clock</span><input type="checkbox" id="p24"></label>
+            <label class="prow" for="pSec"><span>Show seconds in the menu bar</span><input type="checkbox" id="pSec"></label>
+            <p class="pnote" id="pZone"></p>
+
+            <h3>Dock</h3>
+            <label class="prow" for="pSize"><span>Icon size</span><input type="range" id="pSize" min="40" max="72" step="2"></label>
+            <label class="prow" for="pMag"><span>Magnification</span><input type="checkbox" id="pMag"></label>
+
+            <h3>Notifications</h3>
+            <label class="prow" for="pNote"><span>Show notifications</span><input type="checkbox" id="pNote"></label>
+            <div class="prow"><span>Try one now</span><button class="gel small" id="pTest" type="button">Send test</button></div>
+          </div>
+        </div>
+        <span class="grip" aria-hidden="true"></span>
+      </section>
+    </main>
+
+    <!-- Dock -->
+    <nav class="dock" id="dock" aria-label="Dock">
+      <button class="slot" type="button" data-app="whoami" aria-label="Who am I"><span class="tip">whoami</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-whoami"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="journey" aria-label="Journey"><span class="tip">journey</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-journey"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="projects" aria-label="Projects"><span class="tip">projects</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-projects"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="terminal" aria-label="Terminal"><span class="tip">terminal</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-terminal"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="safari" aria-label="Safari"><span class="tip">safari</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-safari"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="reach" aria-label="Reach out"><span class="tip">reach out</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-mail"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="calendar" aria-label="Calendar"><span class="tip">calendar</span><span class="icon">
+        <svg viewBox="0 0 64 64"><rect x="5" y="5" width="54" height="54" rx="13" fill="#fff" stroke="#9aa6b3" stroke-width="1.5"/><path d="M5 18a13 13 0 0 1 13-13h28a13 13 0 0 1 13 13v3H5z" fill="#e8372a"/><text id="calWk" x="32" y="19" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="9" font-weight="700" fill="#fff">WED</text><text id="calDay" x="32" y="49" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="25" font-weight="700" fill="#16222d">11</text></svg>
+      </span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="calc" aria-label="Calculator"><span class="tip">calculator</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-calc"/></svg></span><i class="dot"></i></button>
+      <button class="slot" type="button" data-app="prefs" aria-label="System Preferences"><span class="tip">preferences</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-prefs"/></svg></span><i class="dot"></i></button>
+      <span class="sep" aria-hidden="true"></span>
+      <button class="slot" type="button" data-app="trash" aria-label="Trash"><span class="tip">trash</span><span class="icon"><svg viewBox="0 0 64 64"><use href="#i-trash"/></svg></span><i class="dot"></i></button>
+    </nav>
+  </div>
+
+  <!-- Message sheet -->
+  <div class="sheet-back" id="sheetBack" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+      <h3 id="sheetTitle"></h3>
+      <div id="sheetText"></div>
+      <div class="sheet-actions" id="sheetActions"></div>
+    </div>
+  </div>
+
+  <!-- Power screens -->
+  <div class="veil" id="sleepVeil" hidden>
+    <p class="veil-msg">Click anywhere to wake up</p>
+  </div>
+  <div class="veil" id="restartVeil" hidden>
+    <div class="veil-box"><i class="spin" aria-hidden="true"></i><p class="veil-msg">Restarting...</p></div>
+  </div>
+  <div class="veil" id="offVeil" hidden>
+    <div class="veil-box">
+      <p class="veil-msg" id="offMsg">Shutting down...</p>
+      <button class="gel" id="powerOn" type="button" hidden>Power on</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
