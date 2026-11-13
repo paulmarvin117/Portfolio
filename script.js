@@ -3,9 +3,9 @@
 
   /* ---- Two settings to fill in (see the notes that came with this file) ---- */
   /* Formspree: your form ID, the last part of https://formspree.io/f/xxxxxxxx */
-  var FORMSPREE_ID = '';
+  var FORMSPREE_ID = 'https://formspree.io/f/mzerzyrr';
   /* Search service: the address of your Azure Function, for real Google results and images */
-  var SEARCH_API = '';
+  var SEARCH_API = 'https://portfolio-search-fcayaag9fbeufpfd.southafricanorth-01.azurewebsites.net/api/search';;
 
   var body = document.body;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
